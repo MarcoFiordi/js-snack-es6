@@ -9,6 +9,9 @@
 
 // stampo la bici più leggera
 
+
+
+// creo un array di oggetti, ogni oggetto rappresenta una bici
 const bici = [
     {nome: 'Ripper', peso: 7},
     {nome: 'Zarok', peso: 3},
@@ -18,3 +21,18 @@ const bici = [
     {nome: 'Conte', peso: 5},
     {nome: 'Fortesque', peso: 10}
 ];
+// inizializzo una variabile d’appoggio con la prima bici dell’array
+// la userò per tenere traccia della bici più leggera trovata
+let biciLeggera = bici[0];
+
+// ciclo su tutte le bici presenti nell’array
+for (let i = 0; i < bici.length; i++){
+    let currentPeso = bici[i].peso; // salvo il peso della bici corrente in una variabile
+    if (currentPeso < biciLeggera.peso){ // controllo se la bici corrente è più leggera di quella salvata
+        biciLeggera = bici[i];  // se sì, aggiorno la variabile con la nuova bici più leggera
+    }
+
+}
+// stampo in console la bici con peso minore
+console.log(biciLeggera);
+
