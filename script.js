@@ -40,20 +40,44 @@ console.log(biciLeggera);
 // SNACK 2 
 //=======================================================================================================
 
+
+// creo un array di oggetti, ogni oggetto rappresenta una squadra
+// con nome, punti e falli inizializzati a 0
 const squadre = [
     {nome: 'Casterly Rock', punti: 0, falli: 0},
     {nome: 'High Garden', punti: 0, falli: 0},
-    {nome: 'Winterfell', punti: 0, falli:  0},
+    {nome: 'Winterfell', punti: 0, falli: 0},
     {nome: 'Kings Landing', punti: 0, falli: 0},
     {nome: 'Dragon Stone', punti: 0, falli: 0},
     {nome: 'Iron Islands', punti: 0, falli: 0}
 ];
 
-for(let i = 0; i < squadre.length; i++){
-    squadre[i].punti = Math.floor(Math.random() * 100);
-    squadre[i].falli = Math.floor(Math.random() * 100);
+// creo un nuovo array vuoto che conterrà solo nome e falli
+let newArray = [];
 
+// ciclo tutte le squadre per assegnare valori casuali
+for (let i = 0; i < squadre.length; i++){
+
+    // assegno un numero random ai punti
+    squadre[i].punti = Math.floor(Math.random() * 100);
+
+    // assegno un numero random ai falli
+    squadre[i].falli = Math.floor(Math.random() * 100);
 }
+
+// ciclo nuovamente tutte le squadre
+for (let i = 0; i < squadre.length; i++){
+
+    // creo un nuovo oggetto con solo nome e falli
+    // e lo aggiungo al nuovo array
+    newArray.push({
+        nome: squadre[i].nome,
+        falli: squadre[i].falli
+    });
+}
+
+// stampo il nuovo array con i dati richiesti
+console.log(newArray);
 
 
 
