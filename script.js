@@ -32,7 +32,28 @@ for (let i = 0; i < bici.length; i++){
         biciLeggera = bici[i];  // se sì, aggiorno la variabile con la nuova bici più leggera
     }
 
-}
+};
 // stampo in console la bici con peso minore
 console.log(biciLeggera);
+
+//=======================================================================================================
+// SNACK 2 
+//=======================================================================================================
+
+const squadre = [
+    {nome: 'Casterly Rock', punti: 0, falli: 0},
+    {nome: 'High Garden', punti: 0, falli: 0},
+    {nome: 'Winterfell', punti: 0, falli:  0},
+    {nome: 'Kings Landing', punti: 0, falli: 0},
+    {nome: 'Dragon Stone', punti: 0, falli: 0},
+    {nome: 'Iron Islands', punti: 0, falli: 0}
+];
+
+for(let i = 0; i < squadre.length; i++){
+    squadre[i].punti = Math.floor(Math.random() * 100);
+    squadre[i].falli = Math.floor(Math.random() * 100);
+
+}
+
+
 
